@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+String msg=(String)request.getParameter("msg");
+if(msg!=null){
+	%>
+	<h1><%=msg %></h1>
+<% 
+}
+%>
+<form action="update" method="post">
+Email:<input type="text" name="email">
+UserName:<input type="text" name="username">
+Password:<input type="password" name="password">
+	<button>submit</button>
+</form>
+</body>
+</html>
